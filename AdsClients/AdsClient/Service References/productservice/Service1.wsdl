@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8732/AddsService/Service1/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8732/AddsService/Service1/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8732/AddsService/Service1/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AddsService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_addElectornics_InputMessage">
+    <wsdl:part name="parameters" element="tns:addElectornics" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addElectornics_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addElectornicsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:addCategory" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:addCar" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addBook_InputMessage">
+    <wsdl:part name="parameters" element="tns:addBook" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addBook_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateElectonics_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateElectonics" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateElectonics_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateElectonicsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCar" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateBook_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBook" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateBook_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCategory" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getcar_InputMessage">
+    <wsdl:part name="parameters" element="tns:getcar" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getcar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getcarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetLaptop_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLaptop" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetLaptop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLaptopResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMobile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMobile" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMobile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetBooks_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBooks" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetBooks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBooksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetElectronics_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetElectronics" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetElectronics_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetElectronicsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetoneCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetoneCar" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetoneCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetoneCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deletcar_InputMessage">
+    <wsdl:part name="parameters" element="tns:deletcar" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deletcar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deletcarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteElectronics_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteElectronics" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteElectronics_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteElectronicsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="addElectornics">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addElectornics" message="tns:IService1_addElectornics_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addElectornicsResponse" message="tns:IService1_addElectornics_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addCategory" message="tns:IService1_addCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addCategoryResponse" message="tns:IService1_addCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addCar" message="tns:IService1_addCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addCarResponse" message="tns:IService1_addCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addBook">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addBook" message="tns:IService1_addBook_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addBookResponse" message="tns:IService1_addBook_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateElectonics">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateElectonics" message="tns:IService1_UpdateElectonics_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateElectonicsResponse" message="tns:IService1_UpdateElectonics_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateCar" message="tns:IService1_UpdateCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateCarResponse" message="tns:IService1_UpdateCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBook">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateBook" message="tns:IService1_UpdateBook_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateBookResponse" message="tns:IService1_UpdateBook_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getCategory" message="tns:IService1_getCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getCategoryResponse" message="tns:IService1_getCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getcar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getcar" message="tns:IService1_getcar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getcarResponse" message="tns:IService1_getcar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLaptop">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetLaptop" message="tns:IService1_GetLaptop_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetLaptopResponse" message="tns:IService1_GetLaptop_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMobile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetMobile" message="tns:IService1_GetMobile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetMobileResponse" message="tns:IService1_GetMobile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBooks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetBooks" message="tns:IService1_GetBooks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetBooksResponse" message="tns:IService1_GetBooks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetElectronics">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetElectronics" message="tns:IService1_GetElectronics_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetElectronicsResponse" message="tns:IService1_GetElectronics_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetoneCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetoneCar" message="tns:IService1_GetoneCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetoneCarResponse" message="tns:IService1_GetoneCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deletcar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/deletcar" message="tns:IService1_deletcar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deletcarResponse" message="tns:IService1_deletcar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteElectronics">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/deleteElectronics" message="tns:IService1_deleteElectronics_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deleteElectronicsResponse" message="tns:IService1_deleteElectronics_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="addElectornics">
+      <soap:operation soapAction="http://tempuri.org/IService1/addElectornics" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addCategory">
+      <soap:operation soapAction="http://tempuri.org/IService1/addCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addCar">
+      <soap:operation soapAction="http://tempuri.org/IService1/addCar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addBook">
+      <soap:operation soapAction="http://tempuri.org/IService1/addBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateElectonics">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateElectonics" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCar">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateCar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBook">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCategory">
+      <soap:operation soapAction="http://tempuri.org/IService1/getCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getcar">
+      <soap:operation soapAction="http://tempuri.org/IService1/getcar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLaptop">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetLaptop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMobile">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetMobile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBooks">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetBooks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetElectronics">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetElectronics" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetoneCar">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetoneCar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletcar">
+      <soap:operation soapAction="http://tempuri.org/IService1/deletcar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteElectronics">
+      <soap:operation soapAction="http://tempuri.org/IService1/deleteElectronics" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:8732/AddsService/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
